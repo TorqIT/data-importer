@@ -42,7 +42,7 @@ class SumNumbersArray extends AbstractOperator
             }
         });
 
-        return $sumOfValuesl;
+        return $sumOfValues;
     }
 
     /**
