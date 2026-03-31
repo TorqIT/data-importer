@@ -38,7 +38,7 @@ class SumNumbersArray extends AbstractOperator
         $sumOfValues = 0;
         array_walk_recursive($inputData, function ($item) use (&$sumOfValues) {
             if (is_numeric($item)) {
-                sumOfValues += $item;
+                $sumOfValues += $item;
             }
         });
 
