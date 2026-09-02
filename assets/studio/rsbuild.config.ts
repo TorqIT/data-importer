@@ -63,13 +63,14 @@ export default defineConfig({
     },
   },
   plugins: [
-    pluginGenerateEntrypoints(),
+    pluginGenerateEntrypoints({ alternativePluginExportPath: '/plugins' }),
     pluginReact(),
     pluginModuleFederation({
       name: 'pimcore_dataimporter_bundle',
       filename: 'static/js/remoteEntry.js',
       exposes: {
-        '.': './js/src/plugins.ts',
+        '.': './js/src/sdk/index.ts',
+        './plugins': './js/src/plugins.ts',
       },
       dts: false,
       remotes: {
